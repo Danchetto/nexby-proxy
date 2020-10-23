@@ -1,0 +1,33 @@
+{
+  "name": "nexby-proxy",
+  "version": "1.0.0",
+  "description": "Proxy server for SQL injection prevention",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danchetto/nexby-proxy.git"
+  },
+  "author": "tuchin <tuchin@tutu.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danchetto/nexby-proxy/issues"
+  },
+  "homepage": "https://github.com/Danchetto/nexby-proxy#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "pg-native": "^3.0.0",
+    "pg-promise": "^10.7.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.2.0"
+  }
+}
