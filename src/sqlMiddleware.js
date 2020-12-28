@@ -7,8 +7,9 @@ const checkForSql = (data) => {
 
 const middleware = async (ctx, next) => {
   const data = JSON.stringify(ctx.request.body);
+  const url = ctx.request.url
 
-  if (checkForSql(data)) {
+  if (checkForSql(data) || checkForSql(url) ) {
     ctx.status = 400;
     ctx.body = { message: 'UNSAFE REQUEST' }
 

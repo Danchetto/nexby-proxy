@@ -14,9 +14,11 @@ app
 
 app.use(proxy('localhost', {
   port: 5000,
-  userResDecorator: (proxyRes, proxyResData, ctx) => {
-    // TODO: Check response
-  }
+  // userResDecorator: (proxyRes, proxyResData, ctx) => {
+  //   console.log(proxyResData)
+  //   return 'proxyResData'
+  //   // TODO: Check response
+  // }
 }));
 
 console.log("listening on port 5050")
