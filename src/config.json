@@ -1,0 +1,51 @@
+{
+  "adminEmail": "danchetto@yandex.ru",
+  "service_host": "localhost",
+  "service_port": "5000",
+  "port": "5050",
+  "api": {
+    "/api/user/create": {
+      "body": {
+        "login": {
+          "type": "string",
+          "canHasSQL": false
+        },
+        "email": {
+          "type": "string",
+          "canHasSQL": false
+        },
+        "fullname": {
+          "type": "string",
+          "canHasSQL": false
+        },
+        "about": {
+          "type": "string",
+          "canHasSQL": false
+        }
+      },
+      "response": {
+        "201": {
+          "type": "string",
+          "data": "Created"
+        },
+        "409": {
+          "type": "object",
+          "template": {
+            "login": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "about": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
