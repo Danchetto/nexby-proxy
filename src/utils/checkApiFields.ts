@@ -11,8 +11,9 @@ const checkApiFields = (url: string, data: object) => {
   console.log(data)
 
   return Object.keys(data).every(field => {
-    // console.log(`rules[${field}]: ${rules[field]}`)
+    console.log(field, typeof data[field])
     if (rules[field] && typeof data[field] !== rules[field].type) {
+      console.log('FAILED')
       return false
     }
     console.log('canHasSQL:', rules[field].canHasSQL)
